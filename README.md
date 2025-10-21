@@ -2,7 +2,7 @@
 
 Thank you for purchasing NexaLaunch! This is a modern, responsive, and highly customizable landing page template perfect for startups, agencies, and creative teams.
 
-## ✨ Key Features
+##  Key Features
 
 - **Fully Responsive:** Looks great on mobile, tablet, and desktop devices.
 - **Dark/Light Mode:** Built-in theme switcher with `localStorage` to remember user preference.
@@ -14,7 +14,11 @@ Thank you for purchasing NexaLaunch! This is a modern, responsive, and highly cu
 - **Easy Customization:** Built with CSS Variables for simple changes to colors, fonts, and spacing.
 - **Clean & Optimized Code:** Semantic HTML5 and dependency-free vanilla JavaScript.
 
-## 🛠️ Tech Stack
+##  Preview link 
+
+https://walidbenkhali.github.io/nexalaunch-demo
+
+##  Tech Stack
 
 - HTML5
 - CSS3 (with Custom Properties for theming)
@@ -34,4 +38,5 @@ Thank you for purchasing NexaLaunch! This is a modern, responsive, and highly cu
 ### Changing Colors
 
 All theme colors are controlled by CSS variables in the `css/style.css` file. Simply edit the values in the `:root` block to match your brand.
+
 
