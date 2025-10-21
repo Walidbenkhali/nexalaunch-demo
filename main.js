@@ -1,79 +1,107 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile menu toggle
+
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
   const body = document.body;
 
-  const toggleMobileMenu = () => {
-    const isOpen = hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-    mobileMenuOverlay.classList.toggle('active');
-    body.classList.toggle('menu-open', isOpen);
-    hamburger.setAttribute('aria-expanded', String(isOpen));
-    mobileMenu.setAttribute('aria-hidden', String(!isOpen));
-  };
-
   if (hamburger && mobileMenu && mobileMenuOverlay) {
+    const toggleMobileMenu = () => {
+      const isActive = hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      mobileMenuOverlay.classList.toggle('active');
+      body.classList.toggle('menu-open');
+      hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+      mobileMenu.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+    };
+
     hamburger.addEventListener('click', toggleMobileMenu);
     mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
-    document.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', toggleMobileMenu));
+
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        toggleMobileMenu();
+      }
+    });
   }
 
-  // Theme toggle
   const themeToggles = [document.getElementById('themeToggle'), document.getElementById('themeToggleMobile')];
-  const setTheme = (theme) => {
+  
+  const applyTheme = (theme) => {
     document.body.setAttribute('data-theme', theme);
-    themeToggles.forEach(btn => {
-      if (!btn) return;
-      const span = btn.querySelector('span');
-      if (span) span.textContent = theme === 'light' ? '🌙' : '☀️';
+    themeToggles.forEach(toggle => {
+      if(toggle) {
+        const icon = toggle.querySelector('span');
+        if(icon) icon.textContent = theme === 'light' ? '🌙' : '☀️';
+      }
     });
     localStorage.setItem('theme', theme);
   };
-  setTheme(localStorage.getItem('theme') || 'light');
-  themeToggles.forEach(btn => btn && btn.addEventListener('click', () => {
-    setTheme(document.body.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
-  }));
+  
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
 
-  // Hero slideshow
+  themeToggles.forEach(toggle => {
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const newTheme = document.body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        applyTheme(newTheme);
+      });
+    }
+  });
+
   const slides = document.querySelectorAll('.hero-slide');
   const dots = document.querySelectorAll('.hero-dot');
-  let current = 0;
-  const show = (i) => {
-    slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
-    dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
-  };
-  const next = () => { current = (current + 1) % slides.length; show(current); };
   if (slides.length > 1) {
-    let timer = setInterval(next, 5000);
-    dots.forEach((d, i) => d.addEventListener('click', () => {
-      current = i; show(current); clearInterval(timer); timer = setInterval(next, 5000);
-    }));
+    let currentSlide = 0;
+    let slideInterval = setInterval(nextSlide, 5000);
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 5000);
+      });
+    });
   }
 
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      const id = link.getAttribute('href');
-      if (id && id.length > 1) {
-        const target = document.querySelector(id);
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if(href && href.length > 1) {
+        e.preventDefault();
+        const target = document.querySelector(href);
         if (target) {
-          e.preventDefault();
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
     });
   });
 
-  // Fade-in on scroll
-  const io = new IntersectionObserver((entries, obs) => {
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        obs.unobserve(entry.target);
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+  }, observerOptions);
+  
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 });
