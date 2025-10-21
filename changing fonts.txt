@@ -1,0 +1,9 @@
+
+### Changing Fonts
+
+The template uses the "Inter" font from Google Fonts. To change it, update the `<link>` in the `<head>` of `index.html` and change the `--font-base` variable in `css/style.css`.
+
+### Updating Slideshow Images
+
+The hero slideshow images are set as background images in `index.html`. Find this section and replace the URLs with your own image paths:
+

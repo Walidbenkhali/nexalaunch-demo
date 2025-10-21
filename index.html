@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NexaLaunch - Premium Startup Landing Page</title>
+  <meta name="description" content="Modern, responsive landing page with mobile menu, dark mode, hero slideshow, categories, featured products, features, and clean footer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-theme="light">
+  <!-- Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <a href="#" class="logo" aria-label="NexaLaunch Home">NexaLaunch</a>
+
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <div class="header-social" aria-label="Social">
+          <a href="#" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </nav>
+
+      <div class="mobile-controls">
+        <button class="theme-toggle" id="themeToggleMobile" type="button" aria-label="Toggle theme mobile">
+          <span id="themeIconMobile">🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+    </nav>
+    <div class="mobile-social" aria-label="Social">
+      <a href="#" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="social-icon github" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-icon youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </aside>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80');">
+        <div class="hero-content container">
+          <h1>Launch Your Dream Project</h1>
+          <p>Professional landing pages for startups, agencies, and creative teams with cutting-edge design.</p>
+          <a href="#products" class="btn btn-primary">Explore Templates</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&q=80');">
+        <div class="hero-content container">
+          <h1>Modern & Responsive</h1>
+          <p>Beautiful layouts that adapt perfectly to mobile, tablet, and desktop devices.</p>
+          <a href="#categories" class="btn">View Categories</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1920&q=80');">
+        <div class="hero-content container">
+          <h1>Fully Customizable</h1>
+          <p>Tweak colors, fonts, and spacing easily with clean CSS variables.</p>
+          <a href="#features" class="btn">Discover Features</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-nav" role="tablist" aria-label="Slides">
+      <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="categories" class="categories">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Browse by Category</h2>
+        <p>Find the perfect template tailored to your industry and project needs.</p>
+      </div>
+      <div class="category-grid">
+        <article class="category-card fade-in">
+          <div class="category-icon">🚀</div>
+          <h3>Tech Startups</h3>
+          <p>Modern pages optimized for SaaS products and tech companies.</p>
+        </article>
+        <article class="category-card fade-in">
+          <div class="category-icon">🎨</div>
+          <h3>Creative Agencies</h3>
+          <p>Stunning portfolios for designers, studios, and creators.</p>
+        </article>
+        <article class="category-card fade-in">
+          <div class="category-icon">🛒</div>
+          <h3>E‑Commerce</h3>
+          <p>Complete store layouts with product catalogs and checkout.</p>
+        </article>
+        <article class="category-card fade-in">
+          <div class="category-icon">📱</div>
+          <h3>Mobile Apps</h3>
+          <p>App landing pages with feature highlights and screenshots.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section id="products" class="products">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Featured Products</h2>
+        <p>Premium templates ready to launch and easy to customize.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card fade-in">
+          <div class="product-image">📊</div>
+          <div class="product-info">
+            <h3>Analytics Dashboard</h3>
+            <p>Admin panel with charts, tables, and real‑time components.</p>
+            <div class="product-footer">
+              <span class="product-price">$49</span>
+              <a href="#" class="btn btn-small">Live Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card fade-in">
+          <div class="product-image">💼</div>
+          <div class="product-info">
+            <h3>Corporate Landing</h3>
+            <p>Business site with services, team, testimonials, and contact.</p>
+            <div class="product-footer">
+              <span class="product-price">$39</span>
+              <a href="#" class="btn btn-small">Live Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card fade-in">
+          <div class="product-image">🎯</div>
+          <div class="product-info">
+            <h3>Marketing Agency</h3>
+            <p>Portfolio with case studies and client testimonials.</p>
+            <div class="product-footer">
+              <span class="product-price">$45</span>
+              <a href="#" class="btn btn-small">Live Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="product-card fade-in">
+          <div class="product-image">🏪</div>
+          <div class="product-info">
+            <h3>Online Shop</h3>
+            <p>Store with filtering, cart, and payment integrations.</p>
+            <div class="product-footer">
+              <span class="product-price">$59</span>
+              <a href="#" class="btn btn-small">Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text fade-in">
+          <h2>About NexaLaunch</h2>
+          <p>We craft world‑class landing page templates so startups and creators can launch faster and look amazing doing it.</p>
+          <p>Our codebase is robust, accessible, and optimized for performance on every device and browser.</p>
+          <a href="#products" class="btn btn-primary">Explore Our Work</a>
+          <div class="about-stats">
+            <div class="stat-item fade-in">
+              <div class="stat-number">250+</div>
+              <div class="stat-label">Templates Sold</div>
+            </div>
+            <div class="stat-item fade-in">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-item fade-in">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Support</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="about-img-box fade-in">💡</div>
+          <div class="about-img-box fade-in">🎨</div>
+          <div class="about-img-box fade-in">⚡</div>
+          <div class="about-img-box fade-in">🚀</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Why Choose Us?</h2>
+        <p>Built with modern technologies and best practices for real results.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Lightning Fast</h3>
+          <p>Optimized assets and clean code for blazing performance.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Fully Responsive</h3>
+          <p>Pixel‑perfect layouts across phones, tablets, and desktops.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-palette"></i></div>
+          <h3>Easy Customization</h3>
+          <p>Change colors, fonts, and spacing via CSS variables.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-moon"></i></div>
+          <h3>Dark Mode</h3>
+          <p>Smooth theme switching with persistent preference.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-code"></i></div>
+          <h3>Clean Code</h3>
+          <p>Semantic HTML, modular CSS, and vanilla JS—no bloat.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>Free Updates</h3>
+          <p>Continuous improvements and fixes at no extra cost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>NexaLaunch</h4>
+          <p>Premium landing page templates for modern businesses.</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon github" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">All Templates</a></li>
+            <li><a href="#">UI Kits</a></li>
+            <li><a href="#">Plugins & Add‑ons</a></li>
+            <li><a href="#">Bundles</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Video Tutorials</a></li>
+            <li><a href="#">Support Center</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">License</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 NexaLaunch. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,55 +1,37 @@
-# nexalaunch-demo
-Modern, responsive landing page template (HTML/CSS/JS). Mobile slide‑in menu with hamburger, dark mode, hero slideshow, categories, featured products, features, and clean footer. Easy to customize and deploy (GitHub Pages, Netlify, Vercel).
-README intro (copy/paste)
-NexaLaunch — Premium, Responsive Landing Page (HTML/CSS/JS)
+# NexaLaunch - Premium Startup Landing Page
 
-Overview
-NexaLaunch is a modern, lightweight landing page template for startups, agencies, and creators. It’s fully responsive, dark‑mode ready, and built with clean HTML, CSS, and vanilla JS—no frameworks or build steps required. Perfect for product launches, portfolios, and marketing pages.
+Thank you for purchasing NexaLaunch! This is a modern, responsive, and highly customizable landing page template perfect for startups, agencies, and creative teams.
 
+## ✨ Key Features
 
-Key Features
+- **Fully Responsive:** Looks great on mobile, tablet, and desktop devices.
+- **Dark/Light Mode:** Built-in theme switcher with `localStorage` to remember user preference.
+- **Hero Slideshow:** An automated, 3-slide hero section with smooth transitions and dot navigation.
+- **Modern Mobile Menu:** A clean, animated hamburger menu for smaller screens.
+- **Real Social Media Icons:** Uses Font Awesome for high-quality, scalable icons.
+- **6+ Sections:** Includes Hero, Categories, Products, About, Features, and a detailed Footer.
+- **Scroll Animations:** Subtle fade-in animations on scroll for a professional feel.
+- **Easy Customization:** Built with CSS Variables for simple changes to colors, fonts, and spacing.
+- **Clean & Optimized Code:** Semantic HTML5 and dependency-free vanilla JavaScript.
 
-Fully responsive layout for mobile, tablet, and desktop
+## 🛠️ Tech Stack
 
-Modern mobile navigation: animated hamburger + slide‑in menu + overlay
+- HTML5
+- CSS3 (with Custom Properties for theming)
+- Vanilla JavaScript (No jQuery or other libraries)
+- [Font Awesome 6.5.1](https://fontawesome.com/) for icons
+- [Google Fonts (Inter)](https://fonts.google.com/specimen/Inter)
 
-Dark/Light theme toggle with localStorage persistence
+## 📦 Installation
 
-Hero slideshow with clickable dots and auto‑rotation
+1.  Download the `.zip` file from Codester.
+2.  Extract the contents to a new folder on your local machine.
+3.  Open the `index.html` file in your browser to view the template.
+4.  You're all set! Start customizing.
 
-Sections included: Hero, Categories, Featured Products, About, Features, Footer
+## 🎨 Customization
 
-Font Awesome social icons, smooth scroll, and scroll animations
+### Changing Colors
 
-Clean, semantic HTML + CSS variables + vanilla JS
+All theme colors are controlled by CSS variables in the `css/style.css` file. Simply edit the values in the `:root` block to match your brand.
 
-Quick Start
-
-
-Open index.html in a browser, or run:
-
-python3 -m http.server → http://localhost:8000
-
-Customize
-
-Colors: edit :root variables in assets/css/style.css
-
-Fonts: update Google Fonts link + font-family
-
-Social links: update header/footer links
-
-Hero images/content: edit index.html
-
-Deploy
-
-
-Netlify/Vercel: drag & drop the folder (entry: index.html)
-
-License & Issues
-
-MIT License (see LICENSE)
-
-Open issues for bugs/requests
-
-Suggested Topics (add in repo settings)
-landing-page, responsive, dark-mode, mobile-menu, hamburger, html-template, css, javascript, vanilla-js, startup, agency, portfolio, hero, template
