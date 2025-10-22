@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NexaLaunch - Premium Startup Landing Page Template</title>
-  <meta name="description" content="NexaLaunch - Professional startup landing page with hero slideshow, product catalog, dark mode, responsive mobile menu">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaLaunch - Professional Landing Page Templates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="light">
 
+  <!-- ========== MOBILE MENU OVERLAY ========== -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
+  <!-- ========== HEADER ========== -->
   <header>
     <div class="container header-content">
       <div class="logo">NexaLaunch</div>
       
+      <!-- Desktop Navigation -->
       <nav class="desktop-nav">
         <a href="#categories">Categories</a>
         <a href="#products">Products</a>
         <a href="#about">About</a>
         <a href="#features">Features</a>
         <div class="header-social">
-          <a href="https://facebook.com" target="_blank" class="social-icon facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com" target="_blank" class="social-icon twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://instagram.com" target="_blank" class="social-icon instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://linkedin.com" target="_blank" class="social-icon linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://facebook.com" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <div class="theme-toggle" id="themeToggle">
           <span id="themeIcon">🌙</span>
         </div>
       </nav>
 
-      <div class="mobile-controls">
-        <div class="theme-toggle" id="themeToggleMobile">
+      <!-- Mobile Controls -->
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <div class="theme-toggle" id="themeToggleMobile" style="display: none;">
           <span id="themeIconMobile">🌙</span>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
-        </button>
+        </div>
       </div>
     </div>
   </header>
 
-<div class="mobile-menu" id="mobileMenu" inert>
+  <!-- ========== MOBILE MENU ========== -->
+  <div class="mobile-menu" id="mobileMenu">
     <nav class="mobile-nav">
       <a href="#categories">Categories</a>
       <a href="#products">Products</a>
@@ -56,15 +57,16 @@
       <a href="#features">Features</a>
     </nav>
     <div class="mobile-social">
-      <a href="https://facebook.com" target="_blank" class="social-icon facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com" target="_blank" class="social-icon twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com" target="_blank" class="social-icon instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com" target="_blank" class="social-icon linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://github.com" target="_blank" class="social-icon github" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://youtube.com" target="_blank" class="social-icon youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://facebook.com" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank" class="twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com" target="_blank" class="github" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://youtube.com" target="_blank" class="youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
     </div>
   </div>
 
+  <!-- ========== HERO SLIDESHOW ========== -->
   <section class="hero">
     <div class="hero-slides">
       <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&h=1080&fit=crop&q=80');">
@@ -96,6 +98,7 @@
     </div>
   </section>
 
+  <!-- ========== CATEGORIES ========== -->
   <section id="categories" class="categories">
     <div class="container">
       <div class="section-header fade-in">
@@ -127,6 +130,7 @@
     </div>
   </section>
 
+  <!-- ========== PRODUCTS ========== -->
   <section id="products" class="products">
     <div class="container">
       <div class="section-header fade-in">
@@ -204,6 +208,7 @@
     </div>
   </section>
 
+  <!-- ========== ABOUT SECTION ========== -->
   <section id="about" class="about">
     <div class="container">
       <div class="about-content">
@@ -238,6 +243,7 @@
     </div>
   </section>
 
+  <!-- ========== FEATURES ========== -->
   <section id="features" class="features">
     <div class="container">
       <div class="section-header fade-in">
@@ -246,32 +252,32 @@
       </div>
       <div class="feature-grid">
         <div class="feature-card fade-in">
-          <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+          <div class="feature-icon">⚡</div>
           <h3>Lightning Fast</h3>
-          <p>Optimized code and compressed assets ensure blazing fast page load times and superior user experience</p>
+          <p>Optimized code, compressed assets, and lazy loading ensure blazing fast page load times and superior user experience</p>
         </div>
         <div class="feature-card fade-in">
-          <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="feature-icon">📱</div>
           <h3>Fully Responsive</h3>
           <p>Perfect pixel-perfect display on all devices from smartphones to ultra-wide monitors with fluid layouts</p>
         </div>
         <div class="feature-card fade-in">
-          <div class="feature-icon"><i class="fas fa-palette"></i></div>
+          <div class="feature-icon">🎨</div>
           <h3>Easy Customization</h3>
-          <p>Change colors, fonts, and spacing with CSS variables. No complex build tools required</p>
+          <p>Change colors, fonts, spacing with CSS variables and SCSS. No complex build tools required</p>
         </div>
         <div class="feature-card fade-in">
-          <div class="feature-icon"><i class="fas fa-moon"></i></div>
+          <div class="feature-icon">🌓</div>
           <h3>Dark Mode Included</h3>
           <p>Built-in dark theme with smooth transitions and automatic preference detection via localStorage</p>
         </div>
         <div class="feature-card fade-in">
-          <div class="feature-icon"><i class="fas fa-code"></i></div>
+          <div class="feature-icon">📝</div>
           <h3>Clean Code</h3>
           <p>Well-commented, semantic HTML5, modular CSS, and vanilla JavaScript for easy understanding and modification</p>
         </div>
         <div class="feature-card fade-in">
-          <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+          <div class="feature-icon">🔧</div>
           <h3>Free Updates</h3>
           <p>Lifetime updates, bug fixes, and feature improvements at absolutely no additional cost</p>
         </div>
@@ -279,6 +285,7 @@
     </div>
   </section>
 
+  <!-- ========== FOOTER ========== -->
   <footer>
     <div class="container">
       <div class="footer-content">
@@ -297,28 +304,28 @@
         <div class="footer-section">
           <h4>Products</h4>
           <ul>
-            <li><a href="#products">All Templates</a></li>
-            <li><a href="#categories">UI Kits</a></li>
-            <li><a href="#features">Plugins & Add-ons</a></li>
-            <li><a href="#products">Bundles</a></li>
+            <li><a href="#">All Templates</a></li>
+            <li><a href="#">UI Kits</a></li>
+            <li><a href="#">Plugins & Add-ons</a></li>
+            <li><a href="#">Bundles</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h4>Resources</h4>
           <ul>
-            <li><a href="#features">Documentation</a></li>
-            <li><a href="#about">Video Tutorials</a></li>
-            <li><a href="#about">Support Center</a></li>
-            <li><a href="#about">Changelog</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Video Tutorials</a></li>
+            <li><a href="#">Support Center</a></li>
+            <li><a href="#">Changelog</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h4>Company</h4>
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#about">Contact</a></li>
-            <li><a href="#about">License</a></li>
-            <li><a href="#about">Privacy Policy</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">License</a></li>
+            <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
@@ -328,6 +335,8 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <!-- ========== JAVASCRIPT ========== -->
+  
+    <script src="script.js"></script>
 </body>
 </html>
